@@ -4,12 +4,9 @@ from PIL import Image, ImageTk
 root=Tk()
 root.geometry('287x495+1000+130')
 root.title('Calculator')
-#set width and height
+
 canvas=Canvas(root)
 canvas2=Canvas(root)
-#give this image path. image should be in png format.
-#,width=300,height=300
-#Example: "C:\\Users\\ASUS\\OneDrive\\Pictures\\image.png"
 image=Image.open("py.jpg")
 image.thumbnail((500,500))
 image=ImageTk.PhotoImage(image)
@@ -23,11 +20,8 @@ canvas2.create_image(0,0,anchor=NW,image=image2)
 canvas2.place(x=0, y=250)
 
 root.resizable(False,False)
-#root.configure(bg='#e64d00')
 entry = Entry(root , font='300px' ,bd=13 )
 entry.place( x=5, y=20, width='278'  ,height='100' )
-#canvas.create_image(0,0,anchor=NW,image=image)
-#canvas.pack()
 
 def click(num):
     current= entry.get()
